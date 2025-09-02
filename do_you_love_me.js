@@ -26,3 +26,16 @@ yesBtn.addEventListener("click", () => {
     gifResult.play();
   }, 3000);
 });
+
+document.querySelector('.js-yes-btn').addEventListener('click', function() {
+  // Hide question
+  document.querySelector('.question-container').style.display = 'none';
+  // Show heart loader
+  document.querySelector('.cssload-main').style.display = 'block';
+
+  // After 2 seconds, hide loader and show result
+  setTimeout(function() {
+    document.querySelector('.cssload-main').style.display = 'none';
+    document.querySelector('.result-container').style.display = 'block';
+  }, 2800); // 2800ms = 2.8 seconds
+});
